@@ -60,11 +60,9 @@
                 <li class="nav-item">
                     <a class="nav-link fs-4" th:href="@{/perros/nuevo}">Registrar Perro Perdido</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4" th:href="@{/perros/listar}">Lista de Perros Perdidos</a>
-                </li>
- <li class="nav-item">
-                    <a class="nav-link fs-4" th:href="@{/perros/listarPorUsuario}">Lista de Perros Perdidos por usuario</a>
+
+                 <li class="nav-item">
+                    <a class="nav-link fs-4" th:href="@{/perros/listarPorUsuario}">Mis Publicaciones</a>
                 </li>
 
             </ul>
@@ -84,22 +82,39 @@
 
 <br>
 <br>
-<div class="container mb-3">
-    <h8>
-        Bienvenido Usuario con ID: <span th:text="${userId}"></span>
-    </h8>
-</div>
-<div class="container mb-3">
-    <h8>
-        EL NOMBRE ES <span th:text="${nombre}"></span>
-    </h8>
-</div>
+
+
+
+
+
 
 
 <div class="container text-center ">
-    <h1>Bienvenidos a "Busca tu Mascota" </h1>
-<br><br>
+    <h1>Bienvenido <span th:text="${nombre}"></span> a "Busca tu Mascota"</h1>
+    <br><br>
+    <div class="  row justify-content-center">
+        <div class="col-md-3 col-sm-6 mb-3">
+            <a th:href="@{/perros/listar}" target="_parent" style="text-decoration: none; color: #dd636e">
+                <div class="card">
+                    <img src="https://png.pngtree.com/png-clipart/20210912/original/pngtree-lost-dog-cartoon-illustration-sns-png-image_6771630.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Animales Perdidos</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <a  th:href="@{/}" target="_parent" style="text-decoration: none; color: #dd636e">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/d6/74/c4/d674c49810dc4351e98190627b7d8637.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Animales Encotrados</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
 
+    </div>
 </div>
 
 
