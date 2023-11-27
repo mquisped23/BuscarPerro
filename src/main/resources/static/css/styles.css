@@ -1,0 +1,10 @@
+#fondo{
+    background-image: url('imagen/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#navbar{
+    color: #415361;
+    font-weight: 600;
+}
