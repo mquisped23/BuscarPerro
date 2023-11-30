@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perro</title>
+    <title>Formulario para Guardar Perro</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body id="fondo">
+
+
+
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,25 +57,24 @@
 </nav>
 
 
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="text-center mb-4">Editar Perro Perdido</h2>
+                    <h2 class="text-center mb-4">Guardar Perro Encontrado</h2>
 
-                    <form th:object="${perro}" th:action="@{/perros/actualizar/{id}(id=${perro.id})}" method="post"
-                          enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <form th:object="${perro}" th:action="@{/encontrado/guardar}" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
 
                         <div class="form-group">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" th:field="*{nombre}" class="form-control"
-                                   required>
+                            <input type="text" id="nombre" name="nombre" th:field="*{nombre}" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="diaPerdido">Día que se perdió:</label>
-                            <input type="date" id="diaPerdido" th:field="*{diaPerdido}" class="form-control" required>
+                            <label for="diaEncontrado">Día que se encontró:</label>
+                            <input type="date" id="diaEncontrado" th:field="*{diaEncontrado}" class="form-control" required>
                         </div>
 
                         <div class="form-group">
@@ -89,32 +91,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="edad">Edad:</label>
-                            <input type="number" id="edad" name="edad" th:field="*{edad}" class="form-control" required>
+                            <label for="contacto">Numero de Contacto:</label>
+                            <input type="number" id="contacto" name="contacto" th:field="*{contacto}" class="form-control" required>
                         </div>
 
+<br><br>
                         <div class="form-group">
-                            <label for="tamano">Tamaño:</label>
-                            <input type="text" id="tamano" name="tamano" th:field="*{tamano}" class="form-control" required>
+                            <label for="foto">Foto:</label>
+                            <input type="file" id="foto" name="imagen" class="form-control-file">
                         </div>
 
-                        <div class="form-group mb-3">
-                            <label for="raza">Raza:</label>
-                            <input type="text" id="raza" name="raza" th:field="*{raza}" class="form-control" required>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="foto">Foto actual:</label>
-                            <img  id="foto" th:src="@{|${rutaImagenes}/${perro.foto}|}" alt="Foto del perro" class="card-img-top" style="height: 200px; object-fit: cover;">
 
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nuevaImagen">Nueva Foto:</label>
-                            <input type="file" id="nuevaImagen" name="nuevaImagen" class="form-control-file">
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block mt-3">Actualizar</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Guardar</button>
                     </form>
                 </div>
             </div>
@@ -125,6 +114,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
 
 

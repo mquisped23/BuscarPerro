@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface PerroServicio {
 
     Perro guardar(Perro perro);
-
+    void eliminarPorId(Long id);
     List<Perro> listarPerros();
     List<Perro> listarPerrosPorUsuarioId(Long usuarioId);
     Optional<Perro> obtenerPorId(Long id);

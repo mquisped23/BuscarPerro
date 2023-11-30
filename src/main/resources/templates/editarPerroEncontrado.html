@@ -59,9 +59,9 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="text-center mb-4">Editar Perro Perdido</h2>
+                    <h2 class="text-center mb-4">Editar Perro Encontrado</h2>
 
-                    <form th:object="${perro}" th:action="@{/perros/actualizar/{id}(id=${perro.id})}" method="post"
+                    <form th:object="${perro}" th:action="@{/encontrado/actualizar/{id}(id=${perro.id})}" method="post"
                           enctype="multipart/form-data" class="needs-validation" novalidate>
 
                         <div class="form-group">
@@ -71,8 +71,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="diaPerdido">Día que se perdió:</label>
-                            <input type="date" id="diaPerdido" th:field="*{diaPerdido}" class="form-control" required>
+                            <label for="diaEncontrado">Día que se encontró:</label>
+                            <input type="date" id="diaEncontrado" th:field="*{diaEncontrado}" class="form-control" required>
                         </div>
 
                         <div class="form-group">
@@ -89,19 +89,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="edad">Edad:</label>
-                            <input type="number" id="edad" name="edad" th:field="*{edad}" class="form-control" required>
+                            <label for="contacto">Numero de contacto:</label>
+                            <input type="number" id="contacto" name="contacto" th:field="*{contacto}" class="form-control" required>
                         </div>
 
-                        <div class="form-group">
-                            <label for="tamano">Tamaño:</label>
-                            <input type="text" id="tamano" name="tamano" th:field="*{tamano}" class="form-control" required>
-                        </div>
 
-                        <div class="form-group mb-3">
-                            <label for="raza">Raza:</label>
-                            <input type="text" id="raza" name="raza" th:field="*{raza}" class="form-control" required>
-                        </div>
 
                         <div class="form-group">
                             <label for="foto">Foto actual:</label>

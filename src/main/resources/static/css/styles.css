@@ -4,6 +4,18 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+#fondoIndex{
+    background-image: url('imagen/foto4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#fondoGuardar{
+    background-image: url('imagen/foto5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 #navbar{
     color: #415361;
     font-weight: 600;

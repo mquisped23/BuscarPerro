@@ -23,7 +23,7 @@ public class RegistroControlador {
 	}
 	
 	@GetMapping("/")
-	public String verPaginaDeInicio( Model model, @RequestParam(name = "perroPerdidoGuardado", defaultValue = "false") boolean perroPerdidoGuardado) {
+	public String verPaginaDeInicio( Model model, @RequestParam(name = "perroPerdidoGuardado", defaultValue = "false") boolean perroPerdidoGuardado,@RequestParam(name = "perroEncontradoGuardado", defaultValue = "false") boolean perroEncontradoGuardado) {
 		Usuario usuario = servicio.obtenerUsuarioAutenticado();
 
 		if (usuario != null) {
@@ -33,6 +33,7 @@ public class RegistroControlador {
 			model.addAttribute("userId", userId);
 			model.addAttribute("nombre", nombre);
 			model.addAttribute("perroPerdidoGuardado", perroPerdidoGuardado);
+			model.addAttribute("perroEncontradoGuardado", perroEncontradoGuardado);
 		}
 		return "index";
 	}
